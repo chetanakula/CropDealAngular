@@ -1,0 +1,128 @@
+.bg{
+   background-image: url('https://th.bing.com/th/id/OIP.MH7RyfPEc0wyiXv4KEtNwgHaEc?w=295&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'); 
+  
+   height:135vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+  
+ 
+  
+}
+
+.outer {
+    height: 100vh;
+    background: linear-gradient(to top, #59782cb4 50%, #5c9f25fe 90%) no-repeat;
+   
+    /* background-repeat:repeat;
+    background-size:auto;
+    background-size:100px 100px; */ 
+
+    /* border: solid black 1px; */
+    
+   height :0px;
+   
+    background-attachment: fixed;
+}
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#forget {
+
+    min-width: 80px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.btn {
+    
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.panel {
+    min-height: 380px;
+    /* box-shadow: 20px 20px 80px rgb(246, 234, 234); */
+    border-radius: 12px;
+    margin-top: 4px;
+}
+
+.input-field {
+    border-radius: 5px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #eedc16;
+    padding: 1px;
+}
+
+.input-field.error {
+    border: 1px solid red;
+    color: red;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='password'] {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    height: 10%;
+}
+
+fa-eye-slash.btn {
+    border: none;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    position: relative;
+    border-radius: 50%;
+}
+
+.bordert {
+    border-top: 1px solid #aaa;
+    position: relative;
+}
+
+.bordert:after{
+    content: "or connect with";
+    position: absolute;
+    top: -13px;
+    left: 33%;
+    background-color: #fff;
+    padding: 0;
+} 
+
+
+
+
+
+
+
+
+
+
+
+ 

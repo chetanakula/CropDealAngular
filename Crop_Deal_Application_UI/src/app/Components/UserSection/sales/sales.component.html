@@ -1,0 +1,104 @@
+<!-- header starts from here-->
+<div class="start" style=" overflow: hidden;">
+    <div class="Container" style="color:whitesmoke; background-color: #0bf9e5; padding: 3px;">
+        <div class="row">
+            <div class="col-md-10">
+                <h1 style="text-align: center; color: black; margin-left: 30px;">Sales Report
+                </h1>
+            </div>
+            <div class="col-md-2">
+                <button type="button" routerLink="/login" style="padding: 10px; width:80px; margin: 10px;"
+                    class="btn btn-primary">Back</button>
+                <!-- <button type="button" routerLink="/home" style="padding: 5px; width:80px; margin: 10px;"
+                    class="btn btn-primary" (click)="LogOut()">Logout</button> -->
+                <!--<img class="logo" style="width: 70px; height: 50px;" src="../assets/images/login.jpg" alt="">-->
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row content">
+            <div class="boxContainer">
+                <table class="elementsContainer">
+                    <tr>
+                        <!-- <td>          
+                      <input type="text" name="search" [(ngModel)]="searchText" placeholder="Filter Sales"              
+                          class="Search">             
+                           </td> -->
+                        <!--<td>      
+                      <a href="#"><i class="fa-solid fa-magnifying-glass-plus" id="material-icons"></i></a>    
+                  </td>-->
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- cart starts from here-->
+    <div class="container px-3 my-5 clearfix">
+        <!-- Shopping cart table -->
+        <div class="card" style="background-color: #daebc6;">
+            <div class="card-header">
+                <h2 align="center">Sales Report</h2>
+            </div>
+            <br>
+            <div class="card-body" style="background-color: #daebc6;">
+                <div class="table-responsive">
+                    <table class="table table-bordered m-0" id="PDFbtnDiv">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h4>Invoice Id</h4>
+                                </th>
+                                <th>
+                                    <h4>Crop Name</h4>
+                                </th>
+                                <th>
+                                    <h4>Crop Quantity</h4>
+                                </th>
+                                <th>
+                                    <h4>Crop Type</h4>
+                                </th>
+                                <th>
+                                    <h4> Order Date</h4>
+                                </th>
+                                <th>
+                                    <h4> Total Price</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let number of CropDetail">
+                                <td>{{number.invoiceId}}</td>
+                                <td> {{number.cropName}}</td>
+                                <td> {{number.cropQty}}</td>
+                                <td> {{number.cropType}}</td>
+                                <td> {{number.orderDate.slice(0, 10)}}</td>
+                                <td> {{number.orderTotal}}</td>
+                            </tr>
+                        </tbody>
+                        <br>
+                        <h4 align="right">Total Sales Amount : {{TotalSalesAmount}}</h4>
+                    </table>
+                </div>
+                <!-- / Shopping cart table -->
+                <div class=" d-flex flex-wrap justify-content-between align-items-center pb-4">
+                    <div class="d-flex"></div>
+                </div>
+                <!-- <div class="float-right"><h4 align="right">Total Sales Amount : {{TotalSalesAmount}}</h4>     
+                 </div>-->
+                <!--<div class="float-right">      
+             <p align="right">   
+            <button class="btn btn-success btn-lg float-left" type="submit">Checkout</button> 
+            </p>   
+          </div>-->
+                <div class="float-right">
+                    <p align="right">
+                        <button class="button-10" id="salesdwnldbtn" role="button" (click)="PDFbtn()"><strong>DOWNLOAD
+                                REPORT</strong></button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>

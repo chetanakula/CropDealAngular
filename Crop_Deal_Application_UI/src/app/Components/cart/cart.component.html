@@ -1,0 +1,99 @@
+<!-- header starts from here-->
+<div class="Container" style="color:whitesmoke; background-color: #0bc1f9; padding: 10px;">
+    <div class="row">
+        <div class="col-md-10">
+            <h1 style="text-align: center; color: black; margin-left: 30px;">
+                Cart Details</h1>
+            </div>
+            <div class="col-md-2">
+                <!-- <button
+                type="button" [routerLink]="['/homepage']" style="padding: 5px; width:80px; margin: 10px;" 
+                class="btn btn-primary" (click)="LogOut()">Logout</button> -->
+                <button type="back" class="btn btn-danger" style="padding: 10px; width:80px; margin: 10px;" routerLink="/viewcrops">Back</button>
+            <!--<img class="logo" style="width: 70px; height: 50px;" src="../assets/images/login.jpg" alt="">-->
+            
+        </div></div>
+
+</div><!-- cart starts from here-->
+<div class="container px-3 my-5 clearfix">
+     <div class="card">
+         <div class="card-header">
+             <h2 align="center">Crop Cart</h2>
+        </div>
+        <div class="card-body">
+           <div class="table-responsive">
+                 <table class="table table-bordered m-0">
+                     <thead> <tr>
+                            <th>
+                                <h4>CropId</h4>
+                                </th><th>
+                                <h4>Crop Name</h4>
+                            </th>
+                             <th>
+                                 <h4>Crop Quantity</h4>
+                                 </th>
+                                  <th>
+                                
+                                    <h4>Price</h4>
+                                 </th>
+
+                             <th>
+                                 <h4>Total Price</h4>
+                                
+                                </th>
+                             </tr>
+                         </thead>
+                          <tbody>
+                             <tr
+                            *ngFor="let number of CropDetails">
+                             <td>
+                                {{number.cropSaleId}}  
+                               </td>
+                             <td>
+                                 {{number.cropName}}
+                                </td>
+                                  <td>
+                                 <input type="number" value="1"
+                                    [(ngModel)]="number.cropQty">
+                                 </td>
+                             <td> {{number.cropPrice}}
+                                </td>
+                                 <td>
+                                 {{number.cropPrice*number.cropQty}}
+                                 </td>
+                                 </tr>
+                                 </tbody>
+                     </table>
+                     </div>
+            <!-- / Crop cart table -->
+             <div
+                class=" d-flex flex-wrap justify-content-between align-items-center pb-4">
+                 <div
+                    class="d-flex">
+                 </div>
+                 </div>
+                  <div
+                class="float-right">
+                 <p align="right">
+                     <button
+                        class="btn btn-info btn-lg float-left" (click)="TotalAmount()">Total Amount</button>
+                     <br>
+                      <br>
+                    <strong>
+                        {{OrderTotal}}
+                    </strong>
+                 </p>
+                 </div>
+                 
+             <div class="float-right">
+                 <p align="right">
+                     <button
+                        class="btn btn-success btn-lg float-left" type="submit" (click)="AddOrders(CropDetails)">Check
+                        out</button>
+                     </p>
+                     </div>
+
+        </div>
+     </div>
+</div>
+<!--footer starts from here-->

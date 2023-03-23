@@ -1,0 +1,59 @@
+
+<body>
+    <div class="outer">
+    <div class="card-box">
+        <div class="row">
+          <div class="col-sm-4 mt-5 ms-3 position1">
+            <button routerLink="/create" id="addbtn"  class="btn btn-success btn-rounded float-right">Add New</button>
+            <button type="button" [routerLink]="['/admin-page']" style="padding: 5px; width:80px; margin: 10px;"
+          class="btn btn-primary float-right">Back</button>
+        </div>
+        
+        <!-- <div class="col-sm-4 mt-5 ms-3 position1">
+          <button type="button" [routerLink]="['/admin-page']" style="padding: 5px; width:80px; margin: 10px;"
+          class="btn btn-primary float-right">Back</button>
+          
+      </div> -->
+      
+        <!-- <div class="Search-hero  text-center">
+            <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search" autocomplete="off" >
+        </div> -->
+      </div>
+      <br>
+        
+        <div class="row">
+                  <div class="table-responsive">
+                      
+                        <table class="table table-striped" id="datatable" style="width: 100%;" >
+                          <thead class="bg-primary text-dark">
+                              <tr role="row">
+                                <th style="font-size:40px;">CropId</th>
+                                <th style="font-size:40px;">CropName</th>
+                                <!-- <th>CropImage</th> -->
+                                <th style="font-size:40px;">Actions</th>
+                                </tr>
+                          </thead>
+                          <tbody>
+                            
+    <tr *ngFor="let item of croplist| 
+    
+    paginate:{ itemsPerPage: 10 , currentPage: p ,
+      totalItems:totalLength
+    }">
+    
+    <td style="color:darkgreen;font-size:20px;">{{item.cropId}}</td>
+    <td  style="color:darkgreen;font-size:20px;">{{item.cropName}}</td>
+    <!-- <td><img [src]="item.cropImage" alt="image not found" height="100" width="100"></td> -->
+    <td style="color:darkgreen;font-size:20px;"><button (click)="delete(item.cropId)" class="btn btn-danger">Delete</button></td>
+    </tr>
+                          </tbody>
+                      </table>
+                    
+                  </div>
+              </div>
+              <br>
+            </div>
+            <!-- <pagination-controls class="text-center" (pageChange)=" p =$event" style="font-weight: bolder;"></pagination-controls> -->
+          </div>
+          
+        </body>

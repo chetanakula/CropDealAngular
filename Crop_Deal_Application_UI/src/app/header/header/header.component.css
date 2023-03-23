@@ -1,0 +1,19 @@
+/* .navbar{
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+   
+} */
+
+h1{
+    color:darkgreen;
+    size : 100vh;
+}
+.nav-item{
+    display: inline;
+    padding: 1rem;
+}
+button{
+    padding : 10px;
+}
+

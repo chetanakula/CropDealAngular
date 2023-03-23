@@ -1,0 +1,79 @@
+<div style="overflow: hidden;">
+ <div class="Container"
+ style="color:whitesmoke; background-color: #7ac3f0; padding: 5px;">
+ <div class="row">
+ <div class="col-md-10">
+     <h1 style="color: black; text-align: center; margin-left: 30px;">Order Details
+    </h1>
+ </div>
+ <!-- <div class="col-md-2"><button type="button" [routerLink]="['/home']"
+     style="padding: 5px; width:80px; margin: 10px;" class="btn btn-primary"
+      (click)="LogOut()">Logout</button> -->
+      <button type="button" [routerLink]="['/farmer-page']" style="padding: 10px; width:90px; margin: 10px;" class="btn btn-primary">Back</button>
+     </div>
+    </div>
+ </div>
+ <div class="rowcontent" style="padding-top: 2%;">
+ <div class="container">
+   <div class="row content">
+     <div class="drugstable">
+    <table class="table table-bordered">
+     <thead>
+        <tr>
+         <th>
+        <h4>Invoice Id</h4>
+       </th>
+        
+         <th>
+         <h4>Crop Sale Id</h4>
+         </th>
+         <th>
+          <h4>Order Date</h4>
+          </th>
+        <th>
+          <h4>Crop Name</h4>
+         </th>
+        <th>
+          <h4>Crop Type</h4>
+           </th>
+         <th>
+         <h4>Quantity</h4>
+         </th>
+         <th>
+          <h4>Total Amount</h4>
+         </th> 
+         <th>
+         <h4>Action</h4>
+         </th>
+         </tr>
+         </thead>
+    <tbody>
+        <tr *ngFor="let order of InvoiceList">
+            <td>{{order.invoiceId}}</td>
+            <td>{{order.cropSaleId}}</td>
+            <td> {{order.orderDate}}</td>
+            <!-- <td> {{order.dealerId ? order.dealerId:0}} </td> -->
+            <td> {{order.cropName}}</td>
+            <td> {{order.cropType}}</td>
+           <td> {{order.cropQty}}</td>
+            <td> {{order.orderTotal}}</td>  
+            <td>
+             <button type="button" class="confirm" (click)="ReduceCropQuantity(order)">Confirm</button>
+              <button type="button" class="reject" (click)="RejectOrder(order)">Reject</button> 
+            </td>
+         </tr>
+         </tbody>
+         </table>
+         </div>
+         </div>
+         </div>
+         </div>  
+            <!-- <div class="Container" id="footer" 
+             style="color:rgb(0, 0, 0); text-align: center; background-color: #7fbfe7; padding: 4px;"> 
+          <footer>
+         <span>
+            <strong>Crop Deal </strong>
+        </span> 
+     </footer> 
+ </div> -->     
+                  

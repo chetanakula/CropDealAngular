@@ -1,0 +1,52 @@
+<router-outlet></router-outlet>
+<body>
+    <div class="outer">
+      <button class="button1" type="back" class="btn btn-danger" style="padding:10px;width:80px;margin:10px;" routerLink="/dealer-page">Back</button>
+      <div class="inner">
+
+       <button  class=" button2 " type="back" class="btn btn-danger" style="padding:10px;width:80px;margin:10px;" routerLink="/cart">Cart</button></div>
+    <div class="card-box">
+        <div class="row">
+      </div>
+      <br>
+        
+        <div class="row">
+                  <div class="table-responsive">
+                      
+                        <table class="table table-bordered" id="datatable" role="grid" >
+                          <thead class="bg-primary text-dark">
+                              <tr role="row">
+                                <th>Crop Sale Id</th>
+                                 <!-- <th>Crop Image</th> -->
+                                <th>Crop Name</th>
+                                <th>Crop Type</th>
+                                <th>Crop Quantityz(KG)</th>
+                                <th>Crop Price/kg</th>
+                                <th>Action</th>
+                                <!-- <th>Farmer Id</th> -->
+                               
+                                </tr>
+                          </thead>
+                          <tbody>
+    <tr *ngFor="let item of cropviewlist | 
+    paginate:{ itemsPerPage: 5 , currentPage: p ,
+      totalItems:totalLength }">
+    <td>{{item.cropSaleId}}</td>
+    <!-- <td><img [src]="item.cropImage" alt="image not found" height="100" width="100"></td> -->
+    <td>{{item.cropName}}</td>
+    <td>{{item.cropType}}</td>
+    <td>{{item.cropQty}}</td>
+    <td>{{item.cropPrice|currency:'INR'}}</td>
+    <!-- <td>{{item.farmerId}}</td> -->
+    
+    <td><button type="button" (click)="SendCropData(item)" class="btn btn-primary">Buy</button></td>
+    </tr>
+                          </tbody>
+                      </table>
+                    
+                  </div>
+              </div>
+            </div>
+            <!-- <pagination-controls class="text-center" (pageChange)=" p =$event" style="font-weight: bolder;"></pagination-controls> -->
+</div>
+        </body>

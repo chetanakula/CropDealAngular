@@ -1,0 +1,36 @@
+
+.outer { 
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy9skcUwu_IvexE1Mi5JAS7EgB4hXWVE6qJQ&usqp=CAU');
+    background-size: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    min-height: 100vh;
+    
+    
+}
+.inner{
+    width:4px;
+    height: auto;
+    display: inline-block;
+    margin-left: 1700px;
+    
+}
+/* .button1{
+    margin-right: 100px;
+    padding:10px;
+}
+.button2{
+    margin-left: 50px;
+
+} */
+
+th{
+    text-align: center;
+    font-weight: bold;
+}
+td{
+    text-align: center;
+    font-weight: bold;
+}

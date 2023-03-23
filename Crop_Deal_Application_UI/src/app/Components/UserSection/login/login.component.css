@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+    z-index: 0;
+}
+body:before {
+	content: '';
+	position: absolute;
+	width: 100vw;
+	height: 90vh;
+	background-image: url('https://st2.depositphotos.com/1927453/7592/i/950/depositphotos_75925837-stock-photo-rural-landscape-with-wheat-field.jpg');
+	background-position: center center;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	-webkit-background-size: cover;
+	background-size: cover;
+	
+}
+.contact-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 450px;
+	height: 550px;
+	padding: 80px 60px;
+	background:burlywood;
+	font-size: x-large;
+	
+}
+.avatar {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	overflow: hidden;
+	top: calc(-80px/2);
+	left: 250px;
+}
+.contact-form h1 {
+	margin: 0;
+	padding: 0 0 20px;
+	color: rgb(13, 12, 18);
+	text-align: center;
+	text-transform: uppercase;
+}
+.contact-form h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+}
+.contact-form input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+ul{
+  width: 100%;
+	margin-bottom: 20px;
+  border: none;
+	border-bottom: 1px solid transparent;
+	background: transparent;
+	outline: none;
+	height: 40px;
+  width: 300px;
+	color: #fff;
+	font-size: 16px;
+  font-weight: bolder;
+}
+/* .ul.select{
+  background: transparent;
+  width: 100%;=
+  outline: none;
+} */
+
+.contact-form input[type=text], .contact-form input[type=password] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size: 25px;
+}
+.contact-form input[type=submit] {
+	height: 30px;
+	color: black;
+	font-size: 20px;
+	background: blue;
+	cursor: pointer;
+	border-radius: 55px;
+	border: none;
+	outline: none;
+	margin-top: -15%;
+}
+.contact-form a {
+	color: #fff;
+	font-size: 25px;
+	/* font-weight: bold; */
+	text-decoration: none;
+}
+

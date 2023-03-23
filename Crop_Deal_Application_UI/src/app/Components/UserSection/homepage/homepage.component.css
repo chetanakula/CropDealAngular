@@ -1,0 +1,30 @@
+html{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    
+}
+.content{
+    top: 40%;
+    left:35%;
+    position: absolute;
+}
+.content a{
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 5px;
+    
+  
+}
+.head h1{
+    color :rgb(242, 247, 246);
+    text-align: topcenter;
+    font-size: 50px;
+    font-weight: bold;
+   
+   
+}
+
+   

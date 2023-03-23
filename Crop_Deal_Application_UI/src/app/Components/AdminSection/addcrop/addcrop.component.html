@@ -1,0 +1,30 @@
+<body>
+    <div class="container" style=" padding-bottom: 50px; width:590px;padding-top: 200px;">
+    <div class="mb-1">
+    <h1 style="color:black; font-weight: bold; text-align: center; ">Add Crop Type</h1>
+    </div>
+    <form [formGroup]="cropaddform" (ngSubmit)="addcrop()">
+        <div class="mb-1">
+          <br>
+          <label for="exampleInputName" class="form-label" style="font-weight: bold;">Give Your Crop Name :</label>
+          <input type="text" class="form-control" id="exampleInputName" aria-describedby="NameHelp" formControlName="cropName">
+         </div>
+          <div *ngIf="form.cropName.touched && form.cropName.invalid" class="alert alert-danger">
+            <div *ngIf="form.cropName.errors?.['required']">Crop Name is required.</div>
+        </div>
+        <!-- <div class="mb-1">
+          <label for="exampleInputUrl" class="form-label" style="font-weight: bold;"> Enter Crop Image Url </label>
+          <input type="text" class="form-control" id="exampleInputUrl" formControlName="cropImage">
+         </div> -->
+  
+        <!-- <div *ngIf="form.cropImage.touched && form.cropImage.invalid" class="alert alert-danger">
+          <div *ngIf="form.cropImage.errors?.['required']">Crop Image Url is required.</div>
+          </div> -->
+          <br>
+          <br>
+        <button type="submit" class="btn btn-success" style="font-weight: bold;"  >Add Crop</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="back" class="btn btn-danger" style="font-weight: bold;" routerLink="/crop">Back</button>
+   </form>
+      </div>
+</body>
